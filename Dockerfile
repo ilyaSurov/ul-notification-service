@@ -24,7 +24,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 COPY . .
 
 RUN composer dump-autoload --optimize \
-    && mkdir -p /var/log/supervisor storage/framework/{cache,sessions,views} storage/logs bootstrap/cache \
+    && mkdir -p /var/log/supervisor storage/api-docs storage/framework/{cache,sessions,views} storage/logs bootstrap/cache \
     && chown -R www-data:www-data storage bootstrap/cache
 
 COPY docker/nginx/default.conf /etc/nginx/http.d/default.conf

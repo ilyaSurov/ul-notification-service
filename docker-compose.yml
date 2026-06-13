@@ -30,7 +30,7 @@ services:
       RABBITMQ_VHOST: /
       RABBITMQ_QUEUE: notifications
       NOTIFICATION_QUEUE: notifications
-      L5_SWAGGER_GENERATE_ALWAYS: "true"
+      L5_SWAGGER_GENERATE_ALWAYS: "false"
       L5_SWAGGER_CONST_HOST: http://localhost:8080
     depends_on:
       postgres:

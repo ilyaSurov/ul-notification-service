@@ -22,6 +22,9 @@ until php -r "\$r = new Redis(); \$r->connect(getenv('REDIS_HOST'), (int) getenv
 done
 
 php artisan migrate --force
+
+mkdir -p storage/api-docs
 php artisan l5-swagger:generate || true
+chown -R www-data:www-data storage/api-docs storage/logs bootstrap/cache
 
 exec "$@"
