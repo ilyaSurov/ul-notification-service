@@ -1,0 +1,10 @@
+/vendor
+/node_modules
+.git
+docs_project
+.phpunit.cache
+.env
+storage/logs/*
+storage/framework/cache/*
+!storage/logs/.gitkeep
+!storage/framework/cache/.gitkeep
